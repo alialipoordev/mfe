@@ -7,12 +7,15 @@ on:
     paths:
       - "packages/container/**"
 
+permissions:
+  contents: write
+
 defaults:
   run:
     working-directory: packages/container
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:

@@ -119,7 +119,7 @@ export default function Album() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
+                    image="https://www.slashgear.com/img/gallery/5-of-the-fastest-motorcycles-kawasaki-ever-built/intro-1709052498.jpg"
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>

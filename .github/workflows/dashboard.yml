@@ -1,21 +1,21 @@
-name: deploy-auth
+name: deploy-dashboard
 
 on:
   push:
     branches:
       - main
     paths:
-      - "packages/auth/**"
+      - "packages/dashboard/**"
 
 permissions:
   contents: write
 
 defaults:
   run:
-    working-directory: packages/auth
+    working-directory: packages/dashboard
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,10 +23,10 @@ jobs:
       - run: npm install
       - run: npm run build
 
-      - name: Deploy auth to GitHub Pages
+      - name: Deploy dashboard to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          destination_dir: auth/latest
+          destination_dir: dashboard/latest
           keep_files: true
